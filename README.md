@@ -20,7 +20,7 @@ View the site at http://localhost:3000
 
 ### Backend Tasks
 
-- [ ] Add Pagination to index page, to display 5 dogs per page
+- [x] Add Pagination to index page, to display 5 dogs per page
 - [ ] Add the ability for a user to input multiple dog images on an edit form or a new dog form.
 - [ ] Associate dogs with owners
 - [ ] Allow editing only by owner

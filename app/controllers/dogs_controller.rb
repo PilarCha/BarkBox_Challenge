@@ -26,6 +26,10 @@ class DogsController < ApplicationController
   def create
     @dog = Dog.new(dog_params)
 
+    if current_user
+      @dog.owner = current_user
+    end
+
     respond_to do |format|
       if @dog.save
         @dog.images.attach(params[:dog][:image]) if params[:dog][:image].present?

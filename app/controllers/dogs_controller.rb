@@ -11,7 +11,9 @@ class DogsController < ApplicationController
   # GET /dogs/1
   # GET /dogs/1.json
   def show
-    @current_user = current_user.id
+    if current_user
+      @current_user = current_user.id
+    end
   end
 
   # GET /dogs/new
@@ -85,8 +87,10 @@ class DogsController < ApplicationController
 
   # Users appear smarter than they may seem. Make sure only dog owners could edit and destroy dogs
   def correct_owner_of_dog
-    if @dog.owner_id != current_user.id
-      redirect_to root_path, notice: "That wasn't your doggo."
+    if current_user
+      if @dog.owner_id != current_user.id
+        redirect_to root_path, notice: "That wasn't your doggo."
+      end
     end
   end
 end

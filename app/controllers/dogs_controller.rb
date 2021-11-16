@@ -5,7 +5,7 @@ class DogsController < ApplicationController
   # GET /dogs
   # GET /dogs.json
   def index
-    @dogs = Dog.paginate(page: params[:page], per_page: 5)
+    @dogs = Dog.all.includes(:likes).paginate(page: params[:page], per_page: 5)
   end
 
   # GET /dogs/1

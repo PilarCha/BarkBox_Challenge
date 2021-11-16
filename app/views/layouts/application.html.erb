@@ -12,6 +12,7 @@
   <body>
     <div id="layout">
       <header>
+        <Button><%= link_to "Sort", :sort => "updated_at" %></Button>        
         <h1><%= link_to 'Dog Profile Demo', root_path %></h1>
         <div class="actions">
           <% if current_user %>

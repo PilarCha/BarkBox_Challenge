@@ -2,9 +2,9 @@ source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 # I used the below ruby and it worked but I will have ruby 2.5.7 on just in case
-# ruby '2.6.5'
+ruby '2.6.5'
 
-ruby '2.5.7'
+# ruby '2.5.7'
 
 gem 'will_paginate', '~> 3.3'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'

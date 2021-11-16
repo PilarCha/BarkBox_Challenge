@@ -3,4 +3,8 @@ Rails.application.routes.draw do
   devise_for :users
   resources :dogs
   root to: "dogs#index"
+
+  resources :dog do
+    resources :likes
+  end
 end
